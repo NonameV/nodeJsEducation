@@ -1,5 +1,8 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
+const homeRouts = require('./routes/home')
+const coursesRouts = require('./routes/courses')
+const addCourseRouts = require('./routes/add-course')
 
 const app = express()
 
@@ -13,28 +16,13 @@ app.set('view engine', 'hbs')
 app.set('views', 'views')
 
 app.use(express.static('public')) // создаем статическую папкугде храним стили
+app.use(homeRouts)
+app.use(coursesRouts)
+app.use(addCourseRouts)
 
 
-app.get('/', (req, res) => {
-    res.render('home', {
-        title: 'Главная',
-        isHome: true
-    })
-})
 
-app.get('/courses', (req, res) => {
-    res.render('courses', {
-        title: 'Курсы',
-        isCourses: true
-    })
-})
 
-app.get('/add-course', (req, res) => {
-    res.render('add-course', {
-         title: 'Добавить курс',
-         isAddCourse: true
-    })
-})
 
 
 

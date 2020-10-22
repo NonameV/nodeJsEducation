@@ -1,0 +1,24 @@
+{
+  "name": "nodejseducation",
+  "version": "1.0.0",
+  "description": "here I learn nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NonameV/nodeJsEducation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NonameV/nodeJsEducation/issues"
+  },
+  "homepage": "https://github.com/NonameV/nodeJsEducation#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "nodemon": "^2.0.6"
+  }
+}

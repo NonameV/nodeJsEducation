@@ -12,7 +12,7 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
-
+app.use(express.static('public')) // создаем статическую папкугде храним стили
 
 
 app.get('/', (req, res) => {
@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 
 app.get('/courses', (req, res) => {
     res.render('courses')
+})
+
+app.get('/add-course', (req, res) => {
+    res.render('add-course')
 })
 
 

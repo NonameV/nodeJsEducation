@@ -16,15 +16,24 @@ app.use(express.static('public')) // создаем статическую па�
 
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('home', {
+        title: 'Главная',
+        isHome: true
+    })
 })
 
 app.get('/courses', (req, res) => {
-    res.render('courses')
+    res.render('courses', {
+        title: 'Курсы',
+        isCourses: true
+    })
 })
 
 app.get('/add-course', (req, res) => {
-    res.render('add-course')
+    res.render('add-course', {
+         title: 'Добавить курс',
+         isAddCourse: true
+    })
 })
 
 

@@ -19,6 +19,11 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.get('/courses', (req, res) => {
+    res.render('courses')
+})
+
+
 
 
 const PORT = process.env.PORT ||3001

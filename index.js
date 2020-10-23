@@ -16,6 +16,8 @@ app.set('view engine', 'hbs')
 app.set('views', 'views')
 
 app.use(express.static('public')) // создаем статическую папкугде храним стили
+app.use(express.urlencoded({extended: true}))
+
 app.use(homeRouts)
 app.use(coursesRouts)
 app.use(addCourseRouts)

@@ -9,5 +9,10 @@ router.get('/add-course', (req, res) => {
    })
 })
 
+router.post('/add-course', (req, res) => {
+    console.log(req.body)
+
+    res.redirect('/courses')
+})
 
 module.exports = router
